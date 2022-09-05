@@ -2,8 +2,22 @@
 
 Exemplo de como obter e monitorar os dados dos testes feitos em tempo real.
 
+- [Instalações](#instalações)
+- [Configurações](#configurações)
 - [Funcionalidade](#funcionalidade)
 - [Como Funciona](#como-funciona)
+- [Rodando o script](#rodando-o-script)
+
+## Instalações
+
+- **[Node.js e NPM](https://www.nodejs.org/)** (suportadas versões: 10.x.x)
+
+## Configurações
+
+Estando na raiz desse projeto, basta executar:
+```shell
+npm i
+```
 
 ## Funcionalidade
 
@@ -40,3 +54,11 @@ Vamos supor que um id seja: `123456789`
 Precisamos montar nos conectar com o socket usando a estrutura `Id-recent-tests`, ou seja, neste caso: `123456789-recent-tests`.
 
 Com isso em mão, basta a conexão com o socket e toda a informação cairá neste ouvinte, ficando a critério do seu uso.
+
+## Rodando o script
+
+Execute na raiz do projeto:
+
+```shell
+npm run execute
+```
