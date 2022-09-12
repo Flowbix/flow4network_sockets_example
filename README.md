@@ -14,14 +14,24 @@ Exemplo de como obter e monitorar os dados dos testes feitos em tempo real.
 
 ## Configurações
 
-Estando na raiz desse projeto, basta executar:
+- Estando na raiz desse projeto, basta executar para instalar todas as depêndencias:
+
 ```shell
 npm i
 ```
 
+- No script `socketTest.js`, nas variáveis 4 e 5, adicione as credenciais referentes ao usuário admin tal qual:
+
+```js
+const username = 'meu_usuario';
+const password = 'minha_senha';
+```
+
 ## Funcionalidade
 
-Com auxilio de um web socket, poderemos obter um ouvinte (listener) que mantem a conexão com a aplicação e a cada novo teste realizado, automaticamente ele receberá esse novo dado (o teste realizado) pra que você possa fazer a tratativa que desejar.
+Com auxilio de um web socket, poderemos obter um ouvinte (listener) que mantem a conexão com a aplicação e a cada novo teste realizado, automaticamente ele receberá esse novo dado (o teste realizado) pra que você possa fazer a tratativa que desejar.'
+
+Vale ressaltar que a cada nova interação, você deverá receber `um novo teste` e jamais um array de testes. Ou seja, pra cada teste feito o socket receberá uma nova entrada.
 
 Devem ser seguidos os seguintes passos:
 - logar com um usuário válido no sistema (é necessário que seja um Administrador)
@@ -61,4 +71,10 @@ Execute na raiz do projeto:
 
 ```shell
 npm run execute
+```
+
+ou
+
+```shell
+node socketTest.js
 ```
